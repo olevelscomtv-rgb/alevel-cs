@@ -1,3 +1,4 @@
+# creating Lesson class
 class Lesson:
     def __init__(self, LessonType, Instructor):
         self.__LessonType = LessonType
@@ -16,5 +17,16 @@ class Lesson:
         else:
             return -1
 
-    LessonArray = [' '] * 3
-    LessonArray[2] = Lesson("Improve Your Serve", "David")
+# creating array of lessons
+
+LessonArray = [' '] * 3
+
+# it is 9 not 3 
+LessonArray = [' '] * 9
+
+LessonArray[2] = Lesson("Improve Your Serve", "David")
+
+
+
+print(LessonArray)
+
