@@ -1,14 +1,16 @@
-def find_max(array, i):
-    maximum = -10000
+maximum = -10000
+
+def find_max(array, i =0):
+    global maximum
     if i >= len(array):
         return maximum
-    
-    find_max(array, i + 1)
-    print(maximum)
 
     if array[i] > maximum:
         maximum = array[i]
 
+    return find_max(array, i + 1)
 
-array = [2, 4, 1, 9, 0]
-print(find_max(array, 0))
+
+
+arr = [2, 4, 1, 9, 20, 3, 21, 4]
+print(find_max(arr))
