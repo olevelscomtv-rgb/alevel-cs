@@ -5,9 +5,8 @@
 # count = 0
 # while number > 0:
 #     count += 1 
-#     new = number % 10
 #     number = number // 10 
-#     print(new)
+
 
 
 # print(f"The number of digits are {count}")
@@ -19,8 +18,6 @@ def counting(number, count=0):
 
     if number <= 0 :
         return count
-    #new = number % 10
-    #Sir this line ^ has no effect on the code
 
     return counting(number//10,  count + 1)
 
