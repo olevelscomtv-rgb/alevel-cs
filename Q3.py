@@ -12,7 +12,7 @@ class Excercise:
         return self.__Duration
     
     def GetCaloriesBurned(self):
-        return self.__CaloriesBurned
+        return f'Calories Burned: {self.__CaloriesBurned}'
 
     def CalculateCalories(self, ExerciseType, Duration):
         if self.__ExerciseType == 'Running':
@@ -23,3 +23,19 @@ class Excercise:
             self.__CaloriesBurned = self.__Duration * 5
         else:
             self.__CaloriesBurned = self.__Duration * 6
+
+
+print('Available Exercises: Running, Swimming, Walking, Other.')
+exercise = input('Please enter the choosen exercise: ')
+Valid_time = False
+while Valid_time == False:
+    time = input('Please enter the time (1-300min): ')
+    if time < 1 or time > 300:
+        print("Not Valid")
+    else:
+        Valid_time = True
+
+e1 = Excercise(exercise, time)
+e1.CalculateCalories(exercise, time)
+print(e1.GetExerciseType)
+print(e1.GetCaloriesBurned)
