@@ -8,7 +8,11 @@ class Character:
         return self.__Name
 
     def GetX(self):
-            return self.__XCoordinate
+        return self.__XCoordinate
 
     def GetY(self):
-            return self.__YCoordinate
+        return self.__YCoordinate
+
+    def ChangePosition(self, XChange, YChange):
+        self.__XCoordinate += XChange
+        self.__YCoordinate += YChange
