@@ -24,7 +24,7 @@ class Excercise:
         else:
             self.__CaloriesBurned = self.__Duration * 6
 
-def Exercise_Machine():
+if __name__ == "__main__":
     print('Available Exercises: Running, Swimming, Walking, Other.')
     exercise = input('Please enter the choosen exercise: ')
     Valid_time = False
