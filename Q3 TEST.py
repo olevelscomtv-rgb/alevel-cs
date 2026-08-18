@@ -1,18 +1,18 @@
 class BankAccount:
     def __init__(self, accountNumber, ownerName, balance):
-        self._accountNumber = accountNumber
-        self._ownerName = ownerName
-        self._balance  = balance
+        self.accountNumber = accountNumber
+        self.ownerName = ownerName
+        self.__balance  = balance
 
     def deposit(self, amount):
-        self._balance += amount
+        self.__balance += amount
 
     def withdraw(self, amount):
         if amount <= self._balance:
-            self._balance -= amount
+            self.__balance -= amount
 
     def displayBalance(self):
-        print (self._balance)
+        print (self.__balance)
 
 
 Account1 = BankAccount(3070, 'Taaha', 500)
