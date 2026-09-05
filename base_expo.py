@@ -19,4 +19,4 @@ def rec_base(base,power,total = 1):
 
     return (rec_base(base,power - 1, total))
 
-print(rec_base(2,10))
+print(rec_base(2,10)) 
