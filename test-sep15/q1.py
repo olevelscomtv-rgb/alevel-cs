@@ -6,8 +6,8 @@ for i in range(30):
 TopOfStack = -1
 
 def Push(num):
-    global TopOfStack
-    if TopOfStack == 29:
+    global TopOfStack, Stack
+    if TopOfStack > 29:
         return False
     else:
         TopOfStack += 1
@@ -15,7 +15,7 @@ def Push(num):
         return True
 
 def Pop():
-    global TopOfStack
+    global TopOfStack, Stack
     if TopOfStack == -1:
         return -999
     else:
@@ -23,16 +23,13 @@ def Pop():
         TopOfStack -= 1
         return num
 
-def Main():
-    number = random.randint(1, 1000)
-    for x in range(40):
-        if Push(number) == False:
-            return ("Stack full")
-        else:
-            Push(number)
-        return
-    
-    FindValues()
+
+for x in range(40):
+    Pushed = Push(random.randint(0,1000))
+    if Pushed == False:
+        print("Stack full")
+        break
+
 
 def FindValues():
     global TopOfStack
@@ -44,5 +41,3 @@ def FindValues():
         if Pop()[i] < Min:
             Min = Pop()[i]
     return Max, Min
-
-print(Main())
